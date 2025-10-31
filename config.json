@@ -5,6 +5,7 @@
   "inbounds": [
     {
       "port": 8080,
+      "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -20,31 +21,14 @@
         "wsSettings": {
           "path": "/mohammed"
         },
-        "security": "none",
-        "sockopt": {
-          "tcpFastOpen": true,
-          "tproxy": "off"
-        }
+        "security": "none"
       }
     }
   ],
   "outbounds": [
     {
       "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIP"
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": true
-        }
-      }
+      "settings": {}
     }
-  ],
-  "dns": {
-    "servers": [
-      "8.8.8.8",
-      "1.1.1.1"
-    ]
-  }
+  ]
 }

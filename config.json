@@ -1,0 +1,50 @@
+{
+  "log": {
+    "loglevel": "none"
+  },
+  "inbounds": [
+    {
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "mohammed-1234-5678-90ab-cdef12345678",
+            "level": 0
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/mohammed"
+        },
+        "security": "none",
+        "sockopt": {
+          "tcpFastOpen": true,
+          "tproxy": "off"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": true
+        }
+      }
+    }
+  ],
+  "dns": {
+    "servers": [
+      "8.8.8.8",
+      "1.1.1.1"
+    ]
+  }
+}
